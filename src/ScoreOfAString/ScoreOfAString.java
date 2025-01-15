@@ -10,18 +10,18 @@ public class ScoreOfAString {
 
     }
 
-    private static int scoreString ( String element ) {
+        private static int scoreString ( String element ) {
 
-        int score = 0;
+            int score = 0;
 
-        for ( int index = 0; index < element.length() - 1; index++ ) {
+            for ( int index = 0; index < element.length() - 1; index++ ) {
 
-            score += Math.abs(element.charAt( index ) - element.charAt( index + 1 ));
+                score += Math.abs(element.charAt( index ) - element.charAt( index + 1 ));
+
+            }
+
+            return score;
 
         }
-
-        return score;
-
-    }
 
 }
