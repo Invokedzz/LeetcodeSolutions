@@ -53,7 +53,7 @@ public class BitwiseOfAllPairings {
 
             for ( int num1: nums1 ) {
 
-                ans = ans ^ num1;
+                ans ^= num1;
 
             }
 
@@ -63,7 +63,7 @@ public class BitwiseOfAllPairings {
 
             for ( int num2: nums2 ){
 
-                ans = ans ^ num2;
+                ans ^= num2;
             }
 
         }
