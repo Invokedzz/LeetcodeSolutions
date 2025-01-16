@@ -22,7 +22,11 @@ public class BitwiseOfAllPairings {
 
         int result = xorAllNums(nums1, nums2);
 
-        System.out.println( result);
+        int result2 = xorAllNums2(nums1, nums2);
+
+        System.out.println( result );
+
+        System.out.println( result2 );
 
     }
 
@@ -61,6 +65,33 @@ public class BitwiseOfAllPairings {
         }
 
         return ans;
+
+    }
+
+    private static int xorAllNums2 (int[] nums1, int[]nums2) {
+
+        // X.length == Y.length return 0;
+        // odd -> do the operation
+
+        int [] nums3 = new int[nums1.length * nums2.length];
+
+        int receiveValues = 0;
+
+        if ( nums1.length == nums2.length ) return receiveValues;
+
+        for ( int index = 0; index < nums1.length; index++ ) {
+
+            for ( int j = 0; j < nums2.length; j++ ) {
+
+                nums3[index] ^= nums1[index] ^ nums2[j];
+
+                receiveValues = nums3[index];
+
+            }
+
+        }
+
+        return receiveValues;
 
     }
 
