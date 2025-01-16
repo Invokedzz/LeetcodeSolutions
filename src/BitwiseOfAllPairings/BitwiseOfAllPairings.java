@@ -24,9 +24,13 @@ public class BitwiseOfAllPairings {
 
         int result2 = xorAllNums2(nums1, nums2);
 
+        int result3 = xorAllNums3(nums1, nums2);
+
         System.out.println( result );
 
         System.out.println( result2 );
+
+        System.out.println( result3 );
 
     }
 
@@ -92,6 +96,24 @@ public class BitwiseOfAllPairings {
         }
 
         return receiveValues;
+
+    }
+
+    private static int xorAllNums3 (int[] nums1, int[] nums2) {
+
+        int receiveData = 0;
+
+        for ( int item : nums1 ) {
+
+            for ( int otherItem : nums2 ) {
+
+                receiveData ^= item ^ otherItem;
+
+            }
+
+        }
+
+        return receiveData;
 
     }
 
