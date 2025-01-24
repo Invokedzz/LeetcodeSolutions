@@ -22,9 +22,9 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
     public static void main (String[] args) {
 
-        int [] nums = {3, 2, 2, 3};
+        int [] nums = {0,1,2,2,3,0,4,2};
 
-        int val = 3;
+        int val = 2;
 
         System.out.println(removeElement(nums, val));
 
@@ -39,13 +39,13 @@ It does not matter what you leave beyond the returned k (hence they are undersco
         }
 
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) == val) list.remove(i);
+            if (list.get(i) == val) list.remove(list.get(i));
         }
 
         List<Integer> newList = new ArrayList<>(list);
 
         for (int j = 0; j < newList.size(); j++) {
-            if (newList.get(j) == val) newList.remove(j);
+            if (newList.get(j) == val) newList.remove(newList.get(j));
         }
 
         System.out.println(newList);
