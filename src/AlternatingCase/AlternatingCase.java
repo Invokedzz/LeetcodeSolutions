@@ -4,7 +4,7 @@ public class AlternatingCase {
 
     public static void main (String[] args) {
 
-        String str = "altERnaTIng cAsE <=> ALTerNAtiNG CaSe";
+        String str = "Hello World";
 
         String result = toAlternativeString(str);
 
@@ -23,8 +23,6 @@ public class AlternatingCase {
                 strBuilder.append(Character.toLowerCase(string.charAt(i)));
             } else if (Character.isLowerCase(chr)) {
                 strBuilder.append(Character.toUpperCase(string.charAt(i)));
-            } else if (Character.isWhitespace(chr)) {
-                strBuilder.append(" ");
             } else {
                 strBuilder.append(chr);
             }
