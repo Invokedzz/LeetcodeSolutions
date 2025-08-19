@@ -12,7 +12,7 @@ public class SpinWords {
 
     }
 
-    public static String spinWords (String sentence) {
+    private static String spinWords (String sentence) {
 
         String [] arr = sentence.split(" ");
         String reverse = "";
